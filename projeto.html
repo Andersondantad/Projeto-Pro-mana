@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pró Maná - Início</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</head>
+<body class="bg-success-subtle">
+    <div id="app"></div>
+    <script type="module" src="js/main.js"></script>
+    <!-- Conteúdo estático legado mantido como fallback para navegadores sem JavaScript. -->
+
+    <!-- 1. Cabeçalho Principal e Navegação Semântica -->
+    <header class="topo">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="projeto.html">
+                    <img class="d-inline-block align-text-top logo col" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBziU5wviKtPQHKs_883ugCOXFS7cGJfpVpy-nfYrX5A&s=10" alt="Logo da ONG Pró Maná" width="30" height="24">
+                    <h1 class="m-0 texto-subtitulo">ONG Pró Maná</h1>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu de navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                        <li class="nav-item">
+                            <a class="btn btn-success btn-sm" href="pagina de cadastro.html">Realizar Cadastro</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="quem somos.html">Quem Somos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 2. Conteúdo Principal da Página (Apenas um <main> por página) -->
+    <main class="d-flex flex-column align-items-center justify-content-center my-4">
+
+        <!-- Seção Apresentação/Abertura -->
+        <section class="container text-center mb-4" id="sobre-ong">
+            <h2 class="texto-titulo">Compartilhando o pão nosso de cada dia</h2>
+            <p class="texto-base fw-bold">Ambiente seguro para doações</p>
+        
+            <h3 class="texto-subtitulo">Sua ajuda abençoa famílias</h3>
+            <p class="texto-base">
+                Escolha a forma como prefere contribuir hoje. Seja em recursos financeiros ou em alimentos,
+                cada gesto faz uma enorme diferença!
+            </p>
+        </section>
+
+        <!-- Seção Central de Doações -->
+        <section class="container shadow border-0 rounded p-0 bg-body-tertiary overflow-hidden max-w-lg">
+            <header class="text-center text-bg-success p-3">
+                <h3 class="mt-1">Central de Doações</h3>
+                <p class="m-0">Escolha a melhor forma de contribuir com a nossa causa</p>
+            </header>
+
+            <div class="p-3">
+                <h4 class="texto-subtitulo">Qual tipo de doação deseja fazer?</h4>
+
+                <!-- Elemento <form> englobando os campos interativos -->
+                <form action="#" method="post">
+                    <div class="accordion" id="accordionExample">
+                        
+                        <!-- Bloco 1: PIX -->
+                        <article class="accordion-item">
+                            <h5 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Transferência via PIX
+                                </button>
+                            </h5>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <fieldset class="row g-3">
+                                        <legend class="visually-hidden">Dados para doação via PIX</legend>
+                                        <div class="col-12">
+                                            <label for="chave-pix" class="form-label">Chave PIX</label>
+                                            <input type="text" id="chave-pix" name="chave-pix" class="form-control" placeholder="Digite sua chave PIX" autocomplete="off">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="valor-doacao" class="form-label">Valor da doação</label>
+                                            <input type="number" id="valor-doacao" name="valor-doacao" class="form-control" placeholder="R$ 0,00" min="0.01" step="0.01" inputmode="decimal">
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Bloco 2: Alimentos -->
+                        <article class="accordion-item">
+                            <h5 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Em Alimentos (Cesta básica)
+                                </button>
+                            </h5>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    
+                                    <fieldset class="itens-doacao mb-4">
+                                        <legend class="h6">Itens para doação em alimentos</legend>
+                                        
+                                        <div class="input-group flex-nowrap mb-3">
+                                            <label class="input-group-text" for="item-feijao">
+                                                <input class="form-check-input mt-0 ms-1 me-1" type="checkbox" id="item-feijao">
+                                                Feijão (kg)
+                                            </label>
+                                            <div class="input-group-text">
+                                                <input class="form-control me-1" placeholder="Quantidade" type="number" id="qtd-feijao" min="1">
+                                                <span>pacote(s)</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="input-group flex-nowrap mb-3">
+                                            <label class="input-group-text" for="item-arroz">
+                                                <input class="form-check-input mt-0 ms-1 me-1" type="checkbox" id="item-arroz">
+                                                Arroz (kg)
+                                            </label>
+                                            <div class="input-group-text">
+                                                <input class="form-control me-1" placeholder="Quantidade" type="number" id="qtd-arroz" min="1">
+                                                <span>pacote(s)</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="input-group flex-nowrap mb-3">
+                                            <label class="input-group-text" for="item-macarrao">
+                                                <input class="form-check-input mt-0 ms-1 me-1" type="checkbox" id="item-macarrao">
+                                                Macarrão (500g)
+                                            </label>
+                                            <div class="input-group-text">
+                                                <input class="form-control me-1" placeholder="Quantidade" type="number" id="qtd-macarrao" min="1">
+                                                <span>pacote(s)</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="input-group flex-nowrap mb-3">
+                                            <label class="input-group-text" for="item-acucar">
+                                                <input class="form-check-input mt-0 ms-1 me-1" type="checkbox" id="item-acucar">
+                                                Açúcar (1 kg)
+                                            </label>
+                                            <div class="input-group-text">
+                                                <input class="form-control me-1" placeholder="Quantidade" type="number" id="qtd-acucar" min="1">
+                                                <span>pacote(s)</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="input-group flex-nowrap mb-3">
+                                            <label class="input-group-text" for="item-oleo">
+                                                <input class="form-check-input mt-0 ms-1 me-1" type="checkbox" id="item-oleo">
+                                                Óleo de Soja (garrafa)
+                                            </label>
+                                            <div class="input-group-text">
+                                                <input class="form-control me-1" placeholder="Quantidade" type="number" id="qtd-oleo" min="1">
+                                                <span>garrafa(s)</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="input-group flex-nowrap mb-3">
+                                            <label class="input-group-text" for="item-cafe">
+                                                <input class="form-check-input mt-0 ms-1 me-1" type="checkbox" id="item-cafe">
+                                                Café (pacote)
+                                            </label>
+                                            <div class="input-group-text">
+                                                <input class="form-control me-1" placeholder="Quantidade" type="number" id="qtd-cafe" min="1">
+                                                <span>pacote(s)</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="input-group flex-nowrap mb-3">
+                                            <label class="input-group-text" for="item-leite">
+                                                <input class="form-check-input mt-0 ms-1 me-1" type="checkbox" id="item-leite">
+                                                Leite em pó (saco/lata)
+                                            </label>
+                                            <div class="input-group-text">
+                                                <input class="form-control me-1" placeholder="Quantidade" type="number" id="qtd-leite" min="1">
+                                                <span>pacote(s)</span>
+                                            </div>                
+                                        </div>
+                                    </fieldset>
+
+                                    <fieldset class="formulario-entrega">
+                                        <legend class="legenda texto-pequeno fw-bold">*Se selecionar "Coleta em Domicílio", favor preencher os dados abaixo</legend>
+                                        
+                                        <div class="mb-3">
+                                            <label for="modalidade-entrega" class="form-label">Opção de entrega</label>
+                                            <select id="modalidade-entrega" name="modalidade-entrega" class="form-select">
+                                                <option value="ponto">Vou entregar no ponto de arrecadação</option>
+                                                <option value="coleta">Solicitar coleta em domicílio</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-control row g-3 mx-0 mb-3 p-3 text-bg-success formulario-dados">
+                                            <div class="col-12">
+                                                <label for="nome-completo" class="form-label">Nome completo</label>
+                                                <input type="text" id="nome-completo" name="nome-completo" class="form-control" placeholder="Digite seu nome completo" autocomplete="name" required>
+                                            </div>
+                                            <div class="col-12">
+                                                <label for="endereco" class="form-label">Endereço</label>
+                                                <input type="text" id="endereco" name="endereco" class="form-control" placeholder="Digite seu endereço" required>
+                                            </div>
+                                            <div class="col-12">
+                                                <label for="telefone" class="form-label">Telefone</label>
+                                                <input type="tel" id="telefone" name="telefone" class="form-control" inputmode="tel" placeholder="(00) 00000-0000" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" title="Digite o telefone no formato (00) 00000-0000" required>
+                                            </div>
+                                            <div class="col-12">
+                                                <label for="cpf" class="form-label">CPF</label>
+                                                <input type="text" id="cpf" name="cpf" class="form-control" inputmode="numeric" placeholder="000.000.000-00" maxlength="14" pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}" title="Digite o CPF no formato 000.000.000-00" required>
+                                            </div>
+                                            <div class="col-12">
+                                                <label for="cep" class="form-label">CEP</label>
+                                                <input type="text" id="cep" name="cep" class="form-control" inputmode="numeric" placeholder="00000-000" maxlength="9" pattern="[0-9]{5}-[0-9]{3}" title="Digite o CEP no formato 00000-000" autocomplete="postal-code" required>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+
+                                    <button type="submit" class="btn btn-success w-100 mt-2">Confirmar Doação</button>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- 3. Rodapé Semântico -->
+    <footer>
+        <div class="container text-center py-3">
+            <p class="m-0">&copy; 2026 ONG Pró Maná. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
